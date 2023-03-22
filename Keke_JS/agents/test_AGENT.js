@@ -4,7 +4,8 @@
 
 
 //get imports (NODEJS)
-var simjs = require('../js/simulation')					//access the game states and simulation
+var simjs = require('../js/simulation')
+//access the game states and simulation
 
 let possActions = ["space", "right", "up", "left", "down"];
 
@@ -19,16 +20,20 @@ function iterSolve(init_state) {
 }
 
 
+
 // VISIBLE FUNCTION FOR OTHER JS FILES (NODEJS)
 module.exports = {
     step: function (init_state) {
         return iterSolve(init_state)
-    },		// iterative step function (returns solution as list of steps from poss_actions or empty list)
+    },
+	// iterative step function (returns solution as list of steps from poss_actions or empty list)
     init: function (init_state) {
-    },							// initializing function here
+    },
+	// initializing function here
     best_sol: function () {
         return [];
-    }				//returns closest solution in case of timeout
+    }
+	//returns the closest solution in case of timeout
 }
 
 
